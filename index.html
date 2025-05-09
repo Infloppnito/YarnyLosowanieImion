@@ -196,9 +196,9 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebas
     }
   };
 
-  window.sprawdzAdmina = function () {
-    const haslo = prompt("Podaj hasło administratora:");
-    if (!wpisaneHaslo) return;
+  window.sprawdzAdmina = async function () {
+  const wpisaneHaslo = prompt("Podaj hasło administratora:");
+  if (!wpisaneHaslo) return;
 
   try {
     const snapshot = await get(ref(db, 'admin/haslo'));
